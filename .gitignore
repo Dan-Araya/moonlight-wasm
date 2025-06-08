@@ -1,0 +1,10 @@
+# Directorios de compilación
+build/
+cmake-build-debug/
+
+# Archivos generados
+*.wasm
+*.js
+
+# Archivos de entorno JetBrains/CLion
+.idea/
