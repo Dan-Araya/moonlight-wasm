@@ -1,0 +1,1 @@
+/home/dan/emsdk/upstream/emscripten/em++ --bind -s MODULARIZE=1 -s EXPORT_NAME=createMoonlightModule -s ENVIRONMENT=web -s ALLOW_MEMORY_GROWTH=1 -s EXPORTED_RUNTIME_METHODS='["ccall","cwrap"]' @CMakeFiles/moonlight.js.dir/objects1.rsp -o moonlight.js @CMakeFiles/moonlight.js.dir/linkLibs.rsp

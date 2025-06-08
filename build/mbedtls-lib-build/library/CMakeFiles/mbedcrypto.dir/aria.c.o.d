@@ -1,0 +1,23 @@
+mbedtls-lib-build/library/CMakeFiles/mbedcrypto.dir/aria.c.o: \
+  /home/dan/Escritorio/Aspha/code/moonlight-wasm/moonlight-common-c/external/mbedtls/library/aria.c \
+  /home/dan/Escritorio/Aspha/code/moonlight-wasm/moonlight-common-c/external/mbedtls/library/common.h \
+  /home/dan/Escritorio/Aspha/code/moonlight-wasm/moonlight-common-c/external/mbedtls/library/mbedtls/config.h \
+  /home/dan/Escritorio/Aspha/code/moonlight-wasm/moonlight-common-c/external/mbedtls/include/mbedtls/check_config.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/limits.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/stddef.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/__stddef_header_macro.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/__stddef_ptrdiff_t.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/__stddef_size_t.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/__stddef_wchar_t.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/__stddef_null.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/__stddef_max_align_t.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/__stddef_offsetof.h \
+  /home/dan/emsdk/upstream/lib/clang/21/include/stdint.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dan/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h

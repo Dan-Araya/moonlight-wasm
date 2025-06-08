@@ -1,0 +1,14 @@
+/home/dan/Descargas/clion-2024.2.0.1/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/home/dan/emsdk/upstream/emscripten/emcc -DCMAKE_CXX_COMPILER=/home/dan/emsdk/upstream/emscripten/em++ -G "Unix Makefiles" -S /home/dan/Escritorio/Aspha/code/moonlight-wasm -B /home/dan/Escritorio/Aspha/code/moonlight-wasm/cmake-build-debug
+CMake Error at CMakeLists.txt:19 (add_subdirectory):
+  add_subdirectory given source
+  "/home/dan/Escritorio/Aspha/code/moonlight-wasm/moonlight-common-c/external/mbedtls"
+  which is not an existing directory.
+
+
+CMake Error at CMakeLists.txt:25 (add_subdirectory):
+  add_subdirectory given source
+  "/home/dan/Escritorio/Aspha/code/moonlight-wasm/moonlight-common-c" which
+  is not an existing directory.
+
+
+-- Configuring incomplete, errors occurred!
