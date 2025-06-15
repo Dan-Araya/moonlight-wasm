@@ -36,6 +36,6 @@ target_link_libraries(moonlight.js
 
 # Opciones de salida WebAssembly
 set_target_properties(moonlight.js PROPERTIES
-        LINK_FLAGS "--bind -s MODULARIZE=1 -s EXPORT_NAME=createMoonlightModule -s ENVIRONMENT=web -s ALLOW_MEMORY_GROWTH=1 -s EXPORTED_RUNTIME_METHODS='[\"ccall\",\"cwrap\"]'"
+        LINK_FLAGS "--bind -s MODULARIZE=1 -s EXPORT_NAME=createMoonlightModule -s ENVIRONMENT=web -s ALLOW_MEMORY_GROWTH=1 -s ASYNCIFY -s EXPORTED_RUNTIME_METHODS='[\"ccall\",\"cwrap\"]'"
         OUTPUT_NAME "moonlight"
 )
