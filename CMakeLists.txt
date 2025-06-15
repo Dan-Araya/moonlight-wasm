@@ -21,7 +21,7 @@ add_subdirectory(${MOONLIGHT_SRC_DIR}/external/mbedtls mbedtls-lib-build)
 # Incluir headers de MbedTLS
 include_directories(${MOONLIGHT_SRC_DIR}/external/mbedtls/include)
 
-# Incluir moonlight-common-c como subdirectorio
+# Incluir moonlight-common-c como subdirectory
 add_subdirectory(${MOONLIGHT_SRC_DIR} build-moonlight)
 
 # Archivos fuente del binding WebAssembly
@@ -34,8 +34,33 @@ target_link_libraries(moonlight.js
         mbedcrypto
 )
 
-# Opciones de salida WebAssembly
+# Flags de WebAssembly mejoradas y corregidas
+set(EMSCRIPTEN_LINK_FLAGS
+        "--bind"
+        "-s MODULARIZE=1"
+        "-s EXPORT_NAME=createMoonlightModule"
+        "-s ENVIRONMENT=web"
+        "-s ALLOW_MEMORY_GROWTH=1"
+        "-s EXPORTED_RUNTIME_METHODS=[\"ccall\",\"cwrap\"]"
+        # ASYNCIFY configuración completa
+        "-s ASYNCIFY=1"
+        "-s ASYNCIFY_STACK_SIZE=65536"
+        # Runtime configuration - CRÍTICO para evitar unwind
+        "-s EXIT_RUNTIME=0"
+        "-s NO_EXIT_RUNTIME=1"
+        # Memoria inicial
+        "-s INITIAL_MEMORY=67108864"
+        # Stack size
+        "-s STACK_SIZE=2097152"
+        # Debugging y assertions
+        "-s ASSERTIONS=1"
+        "-s SAFE_HEAP=0"
+)
+
+# Aplicar las flags
+string(REPLACE ";" " " EMSCRIPTEN_LINK_FLAGS_STR "${EMSCRIPTEN_LINK_FLAGS}")
+
 set_target_properties(moonlight.js PROPERTIES
-        LINK_FLAGS "--bind -s MODULARIZE=1 -s EXPORT_NAME=createMoonlightModule -s ENVIRONMENT=web -s ALLOW_MEMORY_GROWTH=1 -s ASYNCIFY -s EXPORTED_RUNTIME_METHODS='[\"ccall\",\"cwrap\"]'"
+        LINK_FLAGS "${EMSCRIPTEN_LINK_FLAGS_STR}"
         OUTPUT_NAME "moonlight"
 )
